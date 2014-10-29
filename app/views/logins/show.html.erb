@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="small-10 small-offset-1 columns">
+
+    <% if @user.try(:activated) %>
+        <p>Thank you <%= @user.name.capitalize %> for activating your account.  Please <%= link_to 'login', new_login_path %> to use Lab6.</p>
+    <% else %>
+        <p>Before you can use your account, please check your email and follow the instructions to activate your account.</p>
+    <% end %>
+
+    <p>
+      <%= link_to "Go to homepage", root_path %>
+    </p>
+
+  </div>
+<div>

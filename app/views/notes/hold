@@ -1,0 +1,22 @@
+<!-- <div class="row" id="<%= dom_id(@note) %>">>
+  <h3>Notes</h3>
+  <% @problem.notes.each do |note| %>
+    <div class="panel">
+      <p>
+        <%= note.comment %>
+      </p>
+      <p>
+        Posted by <%= note.user.name %>
+        <% if @problem.resolved == false %>
+          <% if current_user == @problem.user && current_user != note.user %>
+            | <%= link_to 'Mark as resolution <i class="fa fa-check-square"></i>'.html_safe, choose_note_path(note) %>
+          <% end %>
+        <% else %>
+          <% if note.chosen %>
+            | <strong>Resolved Problem</strong>
+          <% end %>
+        <% end %>
+      </p>
+    </div>
+  <% end %>
+</div> -->

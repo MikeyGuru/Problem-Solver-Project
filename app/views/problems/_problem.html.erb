@@ -1,0 +1,24 @@
+<div class="row" id="<%= problem.persisted? ? dom_id(problem) : "problem-close" %>">
+  <div class="panel">
+    <div><%= link_to truncate(problem.issue, length: 140, omission: "...(continued)"), problem_path(problem) %></div>
+    <div>Asked by <%= problem.user.name %> on
+      <%= l problem.created_at.in_time_zone('Eastern Time (US & Canada)'), format: :asked %>
+      | <%= pluralize(problem.note_count, 'note') %> posted</div>
+  </div>
+  <p>
+        <% if problem.resolved == false %>
+          <% if current_user == problem.user %>
+            <%= link_to 'Mark as resolved <i class="fa fa-check-square"></i>'.html_safe, close_problem_path(problem.id), remote: true %>
+          <% else %>
+            <strong>Open Problem</strong>
+          <% end %>
+        <% else %>
+          <strong>Closed Problem</strong>
+        <% end %>
+      </p>
+
+      <p>
+        Asked by <%=problem.user.name %>
+      </p>
+
+    </div>

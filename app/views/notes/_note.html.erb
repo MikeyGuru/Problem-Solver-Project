@@ -1,0 +1,6 @@
+<div class="row" id="<%= note.persisted? ? dom_id(note) : "note-new" %>">
+  <div class="panel">
+    <div><%= note.comment %></div>
+    <div>Answered by <%= note.user.name %></div>
+  </div>
+</div>

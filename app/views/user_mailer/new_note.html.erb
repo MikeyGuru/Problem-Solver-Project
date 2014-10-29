@@ -1,0 +1,12 @@
+<p>
+  <%= @greeting %>,
+</p>
+<p>
+  <%= @note.user.name %> added a note to your problem on I Need Help!
+</p>
+<p>
+	"<%= @note.comment %>"
+</p>
+<p>
+  To see your problem, please <%= link_to "click here", problem_url(@problem) %>.
+</p>

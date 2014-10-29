@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment: MyText
+  chosen: false
+  user: two
+  problem: one
+
+one_problem_resolved:
+  comment: MyText
+  chosen: false
+  user: two
+  problem: one_resolved
+
+two:
+  comment: MyText
+  chosen: false
+  user: one
+  problem: two
